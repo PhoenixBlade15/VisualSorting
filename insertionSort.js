@@ -25,7 +25,7 @@ function insertionSort(unsortedList) {
 		i = i+1;
 		
 		// Redraw Squares
-		addUnsortedList(unsortedList, j+1)
+		addUnsortedList(unsortedList, j+1, "")
 	}
 
 	// Adds the sorted list to the page
