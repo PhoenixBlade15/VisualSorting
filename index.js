@@ -19,13 +19,16 @@ sortButton.onclick = function makeUnsortedNumberList() {
         case "selectionSort":
             selectionSort(unsortedNumbers);
             break;
+        case "mergeSort":
+            mergeSortHelper(unsortedNumbers);
+            break;
         default:
             document.write("Error occured try again!");
             break;
     }
 }
 
-function addUnsortedList(unsortedList, numberOn){
+function addUnsortedList(unsortedList, numberOn, identifierString){
     let unsortedListStepsParagraph = document.getElementById("unsortedListSteps");
 	let unsortedListString = "";
 
@@ -36,7 +39,7 @@ function addUnsortedList(unsortedList, numberOn){
 		} else if ( i == numberOn ){
 			unsortedListString += "<b style='color:yellow;'>" + unsortedList[i] + "</b>, ";
 		}
-	}
-	unsortedListString = unsortedListString.substring(0, (unsortedListString.length)-2);
-	unsortedListStepsParagraph.innerHTML += unsortedListString + "<br>";
+    }
+	unsortedListString = "<b style='color:yellow;'>" + identifierString + "</b> " + unsortedListString.substring(0, (unsortedListString.length)-2);
+    unsortedListStepsParagraph.innerHTML += unsortedListString + "<br>";
 }
