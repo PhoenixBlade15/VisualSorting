@@ -16,13 +16,16 @@ sortButton.onclick = function makeUnsortedNumberList() {
         case "insertionSort":
             insertionSort(unsortedNumbers);
             break;
+        case "selectionSort":
+            selectionSort(unsortedNumbers);
+            break;
         default:
             document.write("Error occured try again!");
             break;
     }
 }
 
-function addUnsortedList(unsortedList, numberOn, temp){
+function addUnsortedList(unsortedList, numberOn){
     let unsortedListStepsParagraph = document.getElementById("unsortedListSteps");
 	let unsortedListString = "";
 
