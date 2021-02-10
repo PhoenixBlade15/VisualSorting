@@ -14,7 +14,6 @@
         <option value="insertionSort" selected="selected">Insertion Sort</option>
         <option value="selectionSort">Selection Sort</option>
         <option value="mergeSort">Merge Sort</option>
-        <option value="heapSort">Heap Sort</option>
         <option value="quickSort">Quick Sort</option>
         <option value="shellSort">Shell Sort</option>
         <option value="bubbleSort">Bubble Sort</option>
@@ -23,10 +22,12 @@
         <option value="bucketSort">Bucket Sort</option>
         <option value="radixSort">Radix Sort</option>
         </select>
-        <form>
-            <label for="listSize">Size of list to sort (Minimum of 2):</label>
-            <input type="number" id="listSize" name="listSize" min="2" value="5" onkeyup="drawRect()">
-        </form>
+
+        <br>
+        <label for="listSize">Size of list to sort (Minimum of 2):</label>
+        <input type="number" id="listSize" name="listSize" min="2" value="5" onkeyup="drawRect()">
+        <br>
+
         <button id="sortButton">Sort</button>
     </div>
 
@@ -47,6 +48,9 @@
     <script src="insertionSort.js"></script>
     <script src="selectionSort.js"></script>
     <script src="mergeSort.js"></script>
+    <script src="quickSort.js"></script>
+    <script src="shellSort.js"></script>
+    <script src="bubbleSort.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

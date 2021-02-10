@@ -1,11 +1,18 @@
-function insertionSort(unsortedList) { 
-
+function insertionSortHelper(unsortedList) { 
 	// Variables for the paragraph to put both the unsorted and sorted lists
     let unsortedListStepsParagraph = document.getElementById("unsortedListSteps");  
     let sortedListParagraph = document.getElementById("sortedList");    
 	unsortedListStepsParagraph.innerHTML = "Sorted in steps: <br>";
+
+	unsortedList = insertionSort(unsortedList, 0)
+
+	// Adds the sorted list to the page
+	sortedListParagraph.innerHTML = "Sorted List: " + unsortedList;
+}
+
+function insertionSort(unsortedList, startingPosition) { 
 	
-	let i = 1;
+	let i = startingPosition;
 	while (i < unsortedList.length){
 
 		// Grabs the number at the current index
@@ -25,9 +32,8 @@ function insertionSort(unsortedList) {
 		i = i+1;
 		
 		// Redraw Squares
-		addUnsortedList(unsortedList, j+1, "")
+		addUnsortedList(unsortedList, j+1, "");
 	}
 
-	// Adds the sorted list to the page
-	sortedListParagraph.innerHTML = "Sorted List: " + unsortedList;
+	return unsortedList;
 }

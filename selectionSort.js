@@ -31,7 +31,7 @@ function selectionSort(unsortedList) {
         }
 
         // Redraw Squares
-        addUnsortedList(unsortedList, i, "")
+        addUnsortedList(unsortedList, i, "");
     }
 	sortedListParagraph.innerHTML = "Sorted List: " + unsortedList;
 }

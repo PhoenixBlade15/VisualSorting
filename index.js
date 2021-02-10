@@ -5,6 +5,7 @@ sortButton.onclick = function makeUnsortedNumberList() {
     let unsortedNumbers = []; 
     let unsortedNumbersParagraph = document.getElementById("unsortedList");    
     
+    // Creates a list of unsorted numbers
     unsortedNumbersParagraph.innerHTML = "";
     for (let i = 0; i < listSize; i++){
         let randomNumber = Math.floor(Math.random() * 100);
@@ -12,15 +13,25 @@ sortButton.onclick = function makeUnsortedNumberList() {
     }
     unsortedNumbersParagraph.innerHTML = "Unsorted List: " + unsortedNumbers;
 
+    // Calls the corresponding sort based on switch input
     switch(selectedOption){
         case "insertionSort":
-            insertionSort(unsortedNumbers);
+            insertionSortHelper(unsortedNumbers);
             break;
         case "selectionSort":
             selectionSort(unsortedNumbers);
             break;
         case "mergeSort":
             mergeSortHelper(unsortedNumbers);
+            break;
+        case "quickSort":
+            quickSortHelper(unsortedNumbers);
+            break;
+        case "shellSort":
+            shellSort(unsortedNumbers);
+            break;
+        case "bubbleSort":
+            bubbleSort(unsortedNumbers);
             break;
         default:
             document.write("Error occured try again!");
